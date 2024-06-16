@@ -1,0 +1,60 @@
+/* header */ 
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(180deg, #110f10, #110f1000);
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    overflow: hidden;
+}
+
+/* header content */
+
+header section {
+    width: 50%;
+    height: 100%;
+}
+
+/* header title */
+
+header section:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+header section:first-child .main-title {
+    color: #eeeeee;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+header section:first-child .sub-title {
+    color: #eeeeee;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+}
+
+/* header player counter */
+
+header section:last-child .player-counter {
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+}
+
+header section:last-child .current-player {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+header section:last-child .max-player {
+    font-size: 2.25rem;
+    color: #b6b6b6;
+}

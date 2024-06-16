@@ -1,0 +1,54 @@
+/* footer */
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 3.3rem;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    border-top: 2px solid #284437;
+    background: linear-gradient(180deg, #0e1012, #0d0e11);
+    filter: drop-shadow(0 0 24px #000000);
+}
+
+/* footer button */
+
+footer button {
+    width: 10rem;
+    height: 100%;
+    background: linear-gradient(180deg, #191e1e, #0a0b0e);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #cfcfc0;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: 2px solid #27372f;
+}
+
+footer button:hover {
+    background: linear-gradient(180deg, #1e2b24, #191e1e);
+}
+
+footer button:first-child {
+    margin-left: 5rem;
+    margin-right: 2rem;
+    border-right: 2px solid #27372f;
+    background: linear-gradient(180deg, #2f3e38, #141718);
+}
+
+footer button:first-child:hover {
+    background: linear-gradient(180deg, #3c4d45, #405049);
+}
+
+footer button:last-child {
+    border-right: 2px solid #27372f;
+}
+
+footer button span {
+    filter: drop-shadow(0 0 4px #cfcfc0a0);
+    -webkit-filter: drop-shadow(0 0 4px #cfcfc0a0);
+    pointer-events: none;
+}
