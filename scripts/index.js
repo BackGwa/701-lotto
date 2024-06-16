@@ -75,7 +75,10 @@ function team_count_change(value) {
     if (value == 1 && team_count == 15) {
         return;
     }
-    if (value == -1 && team_count == 2 || value == -1) {
+    if (value == -1 && team_count == 2) {
+        return;
+    }
+    if (value == -1 && joined_player().count > player_count * (team_count - 1)) {
         return;
     }
     team_count += value;
@@ -87,6 +90,9 @@ function player_count_change(value) {
         return;
     }
     if (value == -1 && player_count == 1) {
+        return;
+    }
+    if (value == -1 && joined_player().count > (player_count - 1) * team_count) {
         return;
     }
     player_count += value;
