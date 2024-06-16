@@ -33,11 +33,11 @@ function register_se() {
 }
 
 function click_event() {
-    play("../res/sounds/button_click.wav");
+    play("../res/sounds/button_click.mp3");
 }
 
 function hover_event() {
-    play("../res/sounds/button_hover.wav");
+    play("../res/sounds/button_hover.mp3");
 }
 
 function team_create(team_count, player_count) {
