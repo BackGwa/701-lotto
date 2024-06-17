@@ -106,9 +106,32 @@ function player_count_change(value) {
 }
 
 function soft_reset() {
+    team_create(team_count, player_count);
     dialog_close();
 }
 
 function force_reset() {
     location.reload();
+}
+
+function team_gen() {
+    let player = joined_player();
+
+    if (player.count <= 1) {
+        view_alert("팀을 생성하기에는 적은 인원입니다!", 2000);
+        return;
+    }
+
+    for (let i = 0; i < team_count; i++) {
+        for (let j = 0; j < player_count; j++) {
+            if (player.player.length <= 0) {
+                return;
+            }
+            const team = document.querySelector(`#team${i + 1}`);
+            const player_item = team.querySelector(`#player${j + 1}`);
+            const index = randint(0, player.player.length - 1);
+            player_item.innerText = player.player[index];
+            player.player.splice(index, 1);
+        }
+    }
 }
