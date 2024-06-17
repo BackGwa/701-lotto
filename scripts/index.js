@@ -104,3 +104,11 @@ function player_count_change(value) {
     player_count += value;
     team_create(team_count, player_count);
 }
+
+function soft_reset() {
+    dialog_close();
+}
+
+function force_reset() {
+    location.reload();
+}

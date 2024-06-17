@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/alert.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
 
     <script src="./scripts/alert.js"></script>
     <script src="./scripts/player.js"></script>
     <script src="./scripts/audio.js"></script>
+    <script src="./scripts/dialog.js"></script>
     <script src="./scripts/random.js"></script>
 
     <script src="./scripts/index.js"></script>
@@ -84,13 +86,30 @@
         <button class="hover click">
             <span>팀 생성</span>
         </button>
-        <button class="hover click">
+        <button  onclick="dialog_show('팀 초기화', '정말로 팀을 초기화하시겠습니까?', '초기화', 'soft_reset();')" class="hover click">
             <span>팀 초기화</span>
         </button>
-        <button class="hover click">
+        <button onclick="dialog_show('전체 초기화', '정말로 모든 내용을 초기화하시겠습니까?', '초기화', 'force_reset();')" class="hover click">
             <span>전체 초기화</span>
         </button>
     </footer>
+
+    <!-- dialog -->
+    <div class="dialog">
+        <div class="dialog-box">
+            <div class="dialog-bloom"></div>
+            <div class="dialog-content">
+                <div class="dialog-title"></div>
+                <div class="dialog-subtitle"></div>
+            </div>
+            <div class="dialog-interaction">
+                <div class="dialog-button-area">
+                    <button id="dialog-btn" class="hover click"></button>
+                    <button onclick="dialog_close();" class="hover click">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- alert -->
      <div class="alert">
