@@ -26,6 +26,13 @@ main section:first-child {
     display: grid;
     grid-template-columns: repeat(5, calc(17rem + 5px));
     grid-auto-rows: max-content;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+main section:first-child::-webkit-scrollbar {
+    display: none;
 }
 
 /* team ui */
