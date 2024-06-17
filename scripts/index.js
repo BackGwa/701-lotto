@@ -4,7 +4,7 @@ const subtitle_content = [
     "관음증 ㄱㄴㄱㄴ"
 ];
 
-let team_count = 5;
+let team_count = 4;
 let player_count = 4;
 
 function main() {
@@ -72,13 +72,16 @@ function team_create(team_count, player_count) {
 }
 
 function team_count_change(value) {
-    if (value == 1 && team_count == 15) {
+    if (value == 1 && team_count == 10) {
+        view_alert("최대 10팀만 만들 수 있습니다.", 1500);
         return;
     }
     if (value == -1 && team_count == 2) {
+        view_alert("팀은 최소 2팀으로 구성되어야 합니다.", 1500);
         return;
     }
     if (value == -1 && joined_player().count > player_count * (team_count - 1)) {
+        view_alert("선택 된 인원이 많습니다!", 1500);
         return;
     }
     team_count += value;
@@ -86,13 +89,16 @@ function team_count_change(value) {
 }
 
 function player_count_change(value) {
-    if (value == 1 && player_count == 4) {
+    if (value == 1 && player_count == 8) {
+        view_alert("팀의 최대 인원은 8명 입니다.", 1500);
         return;
     }
     if (value == -1 && player_count == 1) {
+        view_alert("팀의 최소 인원은 1명 입니다.", 1500);
         return;
     }
     if (value == -1 && joined_player().count > (player_count - 1) * team_count) {
+        view_alert("선택 된 인원이 많습니다!", 1500);
         return;
     }
     player_count += value;

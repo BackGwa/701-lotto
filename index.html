@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/alert.css">
 
+    <script src="./scripts/alert.js"></script>
     <script src="./scripts/player.js"></script>
     <script src="./scripts/audio.js"></script>
     <script src="./scripts/random.js"></script>
@@ -48,16 +50,12 @@
 
     <!-- main -->
     <main>
-
         <!-- team list -->
-        <section id="team">
-
-        </section>
-
+        <section id="team"></section>
         <!-- random setting -->
         <section>
             <article class="selector">
-                <div class="option">팀 갯수</div>
+                <div class="option">팀 수</div>
                 <div class="choice">
                     <button onclick="team_count_change(-1);" class="prev hover click"></button>
                     <span id="team-count">5</span>
@@ -93,6 +91,11 @@
             <span>전체 초기화</span>
         </button>
     </footer>
+
+    <!-- alert -->
+     <div class="alert">
+        <span id="alert-content"></span>
+     </div>
 </body>
 
 </html>
