@@ -136,6 +136,8 @@ function team_gen() {
         view_alert("팀을 생성하기에는 적은 인원입니다!", 2000);
         return;
     }
+    
+    soft_reset();
 
     for (let i = 0; i < team_count; i++) {
         for (let j = 0; j < player_count; j++) {
