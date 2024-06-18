@@ -43,7 +43,7 @@ footer button:first-child:hover {
     background: linear-gradient(180deg, #3c4d45, #405049);
 }
 
-footer button:last-child {
+footer button:nth-child(3) {
     border-right: 2px solid #27372f;
 }
 
