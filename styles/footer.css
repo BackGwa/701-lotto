@@ -52,3 +52,16 @@ footer button span {
     -webkit-filter: drop-shadow(0 0 4px #cfcfc0a0);
     pointer-events: none;
 }
+
+/* footer version */
+
+footer .version {
+    position: absolute;
+    right: 1.5rem;
+    color: #ffffff70;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    font-weight: 300;
+    top: 45%;
+    transform: translateY(-50%);
+}
