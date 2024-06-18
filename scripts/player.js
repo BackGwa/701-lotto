@@ -1,13 +1,14 @@
 function load_list() {
     const target = document.querySelector(".player-scroll");
-    for (i in player_list) {
+
+    Object.keys(player_list).forEach((i) => {
         target.innerHTML += `
-            <div class="hover click player-item" id="${player_list[i].name}" onclick="change_stat('${player_list[i].name}');">
-                ${player_list[i].name}
-                <div class="check"></div>
-            </div>
-        `;
-    }
+        <div class="hover click player-item" id="${i}" onclick="change_stat('${i}');">
+            ${i}
+            <div class="check"></div>
+        </div>
+    `;
+    });
 }
 
 function change_stat(name) {
@@ -33,7 +34,7 @@ function joined_player() {
     for (i in player_list) {
         if (player_list[i].joined) {
             count++;
-            player.push(player_list[i].name);
+            player.push(i);
         }
     }
     return {
