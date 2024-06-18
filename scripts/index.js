@@ -77,10 +77,16 @@ function team_create(team_count, player_count) {
 }
 
 function team_count_change(value) {
+    if (value == 1 && (team_count + 1) * player_count > 100) {
+        view_alert("게임의 최대 인원은 100명 입니다.", 1500);
+        return;
+    }
+    /*
     if (value == 1 && team_count == 10) {
         view_alert("최대 10팀만 만들 수 있습니다.", 1500);
         return;
     }
+    */
     if (value == -1 && team_count == 2) {
         view_alert("팀은 최소 2팀으로 구성되어야 합니다.", 1500);
         return;
@@ -94,6 +100,10 @@ function team_count_change(value) {
 }
 
 function player_count_change(value) {
+    if (value == 1 && (player_count + 1) * team_count > 100) {
+        view_alert("게임의 최대 인원은 100명 입니다.", 1500);
+        return;
+    }
     if (value == 1 && player_count == 10) {
         view_alert("팀의 최대 인원은 10명 입니다.", 1500);
         return;
