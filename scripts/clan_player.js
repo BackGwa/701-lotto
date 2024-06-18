@@ -1,6 +1,7 @@
 let player_list = {
     "왈라비" : {
-        name : "왈라비", joined : false
+        name : "왈라비",
+        joined : false
     },
     "그니그니" : {
         name : "그니그니",
