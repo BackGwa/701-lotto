@@ -24,7 +24,7 @@ main section:first-child {
     width: calc(100% - 17rem - 10rem);
     padding-left: 4rem;
     display: grid;
-    grid-template-columns: repeat(5, calc(17rem + 5px));
+    grid-template-columns: repeat(5, calc(17rem - 1px));
     grid-auto-rows: max-content;
     overflow: scroll;
     -ms-overflow-style: none;
@@ -40,7 +40,7 @@ main section:first-child::-webkit-scrollbar {
 main section:first-child .team-list {
     width: 17rem;
     height: fit-content;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -97,6 +97,10 @@ main section:first-child .team-list .team-indicator .team-name {
     align-items: center;
     padding-left: 0.6rem;
     font-family: "Pretendard Variable";
+}
+
+main section:first-child .bottom-margin {
+    margin-bottom: 8rem;
 }
 
 /* main player selector */
