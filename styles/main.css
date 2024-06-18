@@ -100,7 +100,7 @@ main section:first-child .team-list .team-indicator .team-name {
 }
 
 main section:first-child .bottom-margin {
-    margin-bottom: 8rem;
+    margin-bottom: 18rem;
 }
 
 /* main player selector */
@@ -131,7 +131,7 @@ main section:last-child .player-list {
     align-items: center;
 }
 
-main section:last-child .player-list  {
+main section:last-child .player-list {
     margin-top: 4rem;
 }
 
