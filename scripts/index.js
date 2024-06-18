@@ -71,6 +71,8 @@ function team_create(team_count, player_count) {
         `;
     }
 
+    team.innerHTML += "<div class='bottom-margin'></div>";
+
     register_se();
 }
 
@@ -92,8 +94,8 @@ function team_count_change(value) {
 }
 
 function player_count_change(value) {
-    if (value == 1 && player_count == 8) {
-        view_alert("팀의 최대 인원은 8명 입니다.", 1500);
+    if (value == 1 && player_count == 10) {
+        view_alert("팀의 최대 인원은 10명 입니다.", 1500);
         return;
     }
     if (value == -1 && player_count == 1) {
