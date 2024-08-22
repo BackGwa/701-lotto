@@ -15,5 +15,7 @@ let player_list = {
     "merai33" : {},
     "성멘" : {},
     "뾰방이" : {},
-    "ririhito" : {}
+    "ririhito" : {},
+    "무지" : {},
+    "짜이" : {}
 }
